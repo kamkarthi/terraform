@@ -1,3 +1,7 @@
+## Instructions
+
+Please clone this repo and perform following challenges built on each step.
+
 ## Challenge -1 ( web-tier )
 
 1. To provision webtier just execute bootstrap script 
