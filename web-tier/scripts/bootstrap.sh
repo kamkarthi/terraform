@@ -4,9 +4,12 @@ SCRIPT_DIR=`dirname $0`
 cd $SCRIPT_DIR
 cd ..
 
+ssh-keygen -b 2048 -t rsa -f web-tier-sshkey -q -N ""
+
 if [ -f terraform.tf ]; then
-  echo -e "\n WARN: Found existing terraform backend configuration file, take care managing related tfstate \n"
-  echo -e "\n INFO: Inorder to initialize terraform tfstate backend for new infra setup, you must delete this file `pwd`/terraform.tf and bootstrap it again \n"
+  echo -e "\n INFO: Found existing terraform backend configuration under `pwd`/terraform.tf, take care managing related provisioned resources and its tfstate"
+  echo -e ' INFO: To perform normal deployments just continue executing "terraform apply"'
+  echo -e "\n WARN: Inorder to destruct and initialize completely, first cleanup any managed resources including its backend setup(s3 bucket and dynamodb table) and then delete this file `pwd`/terraform.tf and bootstrap it again \n"
   exit 0
 fi
 

@@ -1,0 +1,154 @@
+{
+  "Reservations": [
+   {
+    "Instances": [
+     {
+      "Monitoring": {
+       "State": "enabled"
+      }, 
+      "PublicDnsName": "ec2-63-34-28-122.eu-west-1.compute.amazonaws.com", 
+      "State": {
+       "Code": 16, 
+       "Name": "running"
+      }, 
+      "EbsOptimized": false, 
+      "LaunchTime": "2020-02-21 12:53:36+00:00", 
+      "PublicIpAddress": "63.34.28.122", 
+      "PrivateIpAddress": "10.0.3.248", 
+      "ProductCodes": [], 
+      "VpcId": "vpc-038afde6d9bdfa6b0", 
+      "CpuOptions": {
+       "CoreCount": 1, 
+       "ThreadsPerCore": 1
+      }, 
+      "StateTransitionReason": "", 
+      "InstanceId": "i-017f1686487ac96d9", 
+      "EnaSupport": true, 
+      "ImageId": "ami-099a8245f5daa82bf", 
+      "PrivateDnsName": "ip-10-0-3-248.eu-west-1.compute.internal", 
+      "KeyName": "deployer-key", 
+      "SecurityGroups": [
+       {
+        "GroupName": "web-tier-sg", 
+        "GroupId": "sg-0c87f14085fcb7b5e"
+       }
+      ], 
+      "ClientToken": "fd15c19f-3ddf-ccfd-e1ce-11a72fff75f7", 
+      "SubnetId": "subnet-028ecc9998a294471", 
+      "InstanceType": "t2.micro", 
+      "CapacityReservationSpecification": {
+       "CapacityReservationPreference": "open"
+      }, 
+      "NetworkInterfaces": [
+       {
+        "Status": "in-use", 
+        "MacAddress": "02:a7:90:5a:73:08", 
+        "SourceDestCheck": true, 
+        "VpcId": "vpc-038afde6d9bdfa6b0", 
+        "Description": "", 
+        "NetworkInterfaceId": "eni-03086649297348b87", 
+        "PrivateIpAddresses": [
+         {
+          "PrivateDnsName": "ip-10-0-3-248.eu-west-1.compute.internal", 
+          "PrivateIpAddress": "10.0.3.248", 
+          "Primary": true, 
+          "Association": {
+           "PublicIp": "63.34.28.122", 
+           "PublicDnsName": "ec2-63-34-28-122.eu-west-1.compute.amazonaws.com", 
+           "IpOwnerId": "amazon"
+          }
+         }
+        ], 
+        "PrivateDnsName": "ip-10-0-3-248.eu-west-1.compute.internal", 
+        "InterfaceType": "interface", 
+        "Attachment": {
+         "Status": "attached", 
+         "DeviceIndex": 0, 
+         "DeleteOnTermination": true, 
+         "AttachmentId": "eni-attach-05d0e29e1e0053549", 
+         "AttachTime": "2020-02-21 12:53:36+00:00"
+        }, 
+        "Groups": [
+         {
+          "GroupName": "web-tier-sg", 
+          "GroupId": "sg-0c87f14085fcb7b5e"
+         }
+        ], 
+        "Ipv6Addresses": [], 
+        "OwnerId": "252266531447", 
+        "PrivateIpAddress": "10.0.3.248", 
+        "SubnetId": "subnet-028ecc9998a294471", 
+        "Association": {
+         "PublicIp": "63.34.28.122", 
+         "PublicDnsName": "ec2-63-34-28-122.eu-west-1.compute.amazonaws.com", 
+         "IpOwnerId": "amazon"
+        }
+       }
+      ], 
+      "SourceDestCheck": true, 
+      "Placement": {
+       "Tenancy": "default", 
+       "GroupName": "", 
+       "AvailabilityZone": "eu-west-1c"
+      }, 
+      "Hypervisor": "xen", 
+      "BlockDeviceMappings": [
+       {
+        "DeviceName": "/dev/xvda", 
+        "Ebs": {
+         "Status": "attached", 
+         "DeleteOnTermination": true, 
+         "VolumeId": "vol-086981f8e45730571", 
+         "AttachTime": "2020-02-21 12:53:36+00:00"
+        }
+       }
+      ], 
+      "Architecture": "x86_64", 
+      "RootDeviceType": "ebs", 
+      "IamInstanceProfile": {
+       "Id": "AIPATVPCBZJ3Z4L3I3ZB2", 
+       "Arn": "arn:aws:iam::252266531447:instance-profile/ec2-iam-profile"
+      }, 
+      "RootDeviceName": "/dev/xvda", 
+      "VirtualizationType": "hvm", 
+      "Tags": [
+       {
+        "Value": "web-tier-asg-instance", 
+        "Key": "Name"
+       }, 
+       {
+        "Value": "web-tier-asg", 
+        "Key": "aws:autoscaling:groupName"
+       }
+      ], 
+      "HibernationOptions": {
+       "Configured": false
+      }, 
+      "MetadataOptions": {
+       "State": "applied", 
+       "HttpEndpoint": "enabled", 
+       "HttpTokens": "optional", 
+       "HttpPutResponseHopLimit": 1
+      }, 
+      "AmiLaunchIndex": 0
+     }
+    ], 
+    "ReservationId": "r-0f17e13e7ef2c1d8d", 
+    "RequesterId": "178953610797", 
+    "Groups": [], 
+    "OwnerId": "252266531447"
+   }
+  ], 
+  "ResponseMetadata": {
+   "RetryAttempts": 0, 
+   "HTTPStatusCode": 200, 
+   "RequestId": "befb02e5-eff9-446a-94cf-66f7c4c99067", 
+   "HTTPHeaders": {
+    "date": "Fri, 21 Feb 2020 14:45:15 GMT", 
+    "content-type": "text/xml;charset=UTF-8", 
+    "content-length": "7738", 
+    "vary": "accept-encoding", 
+    "server": "AmazonEC2"
+   }
+  }
+ }

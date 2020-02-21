@@ -6,11 +6,11 @@ resource "aws_lb" "front-end" {
   security_groups    = [aws_security_group.alb_sg.id]
   subnets            = var.PUBLIC_SUBNET_IDS
 
-  enable_deletion_protection = true
+  enable_deletion_protection = var.ALB_DELETE_PROTECTION
 
   tags = {
-    Name = "front-end-web-tier"
-    project = "web-tier"
+    Name        = "front-end-web-tier"
+    project     = "web-tier"
     Environment = "production"
   }
 }
@@ -65,7 +65,7 @@ resource "aws_acm_certificate" "front-endcert" {
   certificate_body = tls_self_signed_cert.fron-end-selfsigned-cert.cert_pem
 
   tags = {
-    Name = "self-signed-cert"
+    Name    = "self-signed-cert"
     project = "web-tier"
   }
 }

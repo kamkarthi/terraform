@@ -25,10 +25,11 @@ data "aws_availability_zones" "available" {
 }
 
 resource "aws_subnet" "public-subnet" {
-  count             = length(var.PUBLIC_SUBNETS)
-  vpc_id            = aws_vpc.mainvpc.id
-  cidr_block        = var.PUBLIC_SUBNETS[count.index]
-  availability_zone = data.aws_availability_zones.available.names[count.index]
+  count                   = length(var.PUBLIC_SUBNETS)
+  vpc_id                  = aws_vpc.mainvpc.id
+  cidr_block              = var.PUBLIC_SUBNETS[count.index]
+  availability_zone       = data.aws_availability_zones.available.names[count.index]
+  map_public_ip_on_launch = true
 
   tags = {
     Name    = "public-subnet-${count.index}"
