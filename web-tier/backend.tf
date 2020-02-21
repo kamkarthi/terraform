@@ -1,3 +1,0 @@
-module "backend" {
-  source = "./backend"
-}

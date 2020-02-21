@@ -1,5 +1,5 @@
 resource "aws_dynamodb_table" "tfstate" {
-  name = "web-tier-terraform-lock-tfstate"
+  name           = "web-tier-terraform-lock-tfstate"
   read_capacity  = 5
   write_capacity = 5
 

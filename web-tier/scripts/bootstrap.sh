@@ -29,3 +29,5 @@ EOF
 
 terraform init -force-copy
 rm -f terraform.tfstate terraform.tfstate.backup
+
+terraform apply -auto-approve
