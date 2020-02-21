@@ -6,7 +6,7 @@ Please clone this repo and perform following challenges built on each step.
 
 1. any linux os
 1. aws credentials already setup (aws configure)
-1. these packages terraform, awscli, boto3, python3 already installed
+1. these packages terraform, awscli, boto3, python3 are already installed
 
 ## Challenge -1 ( web-tier )
 
